@@ -16,7 +16,6 @@
   <script>
     let serverData = {};
 
-    // Color code map from Minecraft (§a, §b, etc.)
     const colorMap = {
       '0': '#000000', '1': '#0000AA', '2': '#00AA00', '3': '#00AAAA',
       '4': '#AA0000', '5': '#AA00AA', '6': '#FFAA00', '7': '#AAAAAA',
@@ -25,7 +24,6 @@
       'r': '#FFFFFF'
     };
 
-    // Convert MOTD with § codes to colored HTML
     function parseMotd(motd) {
       let html = '';
       let color = '#FFFFFF';
@@ -47,7 +45,6 @@
 
       const lowerFilter = filter.toLowerCase();
 
-      // Reverse order
       const reversedEntries = Object.entries(serverData).reverse();
 
       for (const [ip, server] of reversedEntries) {
