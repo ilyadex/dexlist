@@ -388,5 +388,10 @@
     "version": "1.19.2",
     "players": 1,
     "motd": "Nikdoge's Minecraft Server 1.19.2§r"
+  },
+  "5.19.244.248": {
+    "version": "1.21.5",
+    "players": 0,
+    "motd": "GOGOGOGO"
   }
 }
