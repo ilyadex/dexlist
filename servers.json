@@ -403,5 +403,10 @@
     "version": "Paper 1.21.5",
     "players": 0,
     "motd": "Local §r§cutopia§r"
+  },
+  "37.192.168.18": {
+    "version": "Paper 1.21.4",
+    "players": 0,
+    "motd": "боброляндия"
   }
 }
