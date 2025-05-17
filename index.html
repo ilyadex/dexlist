@@ -1,84 +1,45 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
-  <link rel="icon" href="https://static.wikitide.net/2b2twiki/thumb/c/ce/SpawnMason_logo.png/800px-SpawnMason_logo.png" type="image/png">
   <meta charset="UTF-8">
-  <title>Server list minecraft</title>
-  <style>
-    body {
-      background-color: #2a2a2a;
-      color: #ffffff;
-      font-family: Arial, sans-serif;
-      padding: 20px;
-    }
-
-    h1 {
-      font-size: 24px;
-      margin-bottom: 20px;
-    }
-
-    input {
-      padding: 10px;
-      margin-bottom: 20px;
-      width: 300px;
-      border-radius: 4px;
-      border: 1px solid #666;
-      background-color: #3a3a3a;
-      color: #ffffff;
-    }
-
-    .server {
-      background: #3a3a3a;
-      border: 1px solid #555;
-      padding: 15px;
-      margin-bottom: 15px;
-      border-radius: 6px;
-    }
-
-    button {
-      background-color: #444;
-      color: white;
-      border: none;
-      padding: 6px 12px;
-      margin-top: 8px;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #666;
-    }
-
-    .info-button {
-      background-color: #666;
-      margin-left: 10px;
-      padding: 4px 8px;
-    }
-
-    .info-text {
-      background-color: #1e1e1e;
-      padding: 10px;
-      border-radius: 6px;
-      margin-top: 10px;
-      display: none;
-      font-size: 14px;
-      color: #ddd;
-    }
-
-    i {
-      color: #bbbbbb;
-      font-size: 14px;
-    }
-  </style>
+  <title>Minecraft Server List</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="https://static.wikitide.net/2b2twiki/thumb/c/ce/SpawnMason_logo.png/800px-SpawnMason_logo.png" type="image/png">
 </head>
 <body>
-  <h1>Server's minecraft</h1>
+  <h1>🔥 Minecraft Server List</h1>
 
-  <input type="text" id="search" placeholder="Find with IP or MOTD...">
-  <div id="server-list">Loading...</div>
+  <input type="text" id="search" placeholder="🔍 Search by IP or MOTD...">
+  <div id="server-list">⏳ Loading...</div>
 
   <script>
     let serverData = {};
+
+    // Color code map from Minecraft (§a, §b, etc.)
+    const colorMap = {
+      '0': '#000000', '1': '#0000AA', '2': '#00AA00', '3': '#00AAAA',
+      '4': '#AA0000', '5': '#AA00AA', '6': '#FFAA00', '7': '#AAAAAA',
+      '8': '#555555', '9': '#5555FF', 'a': '#55FF55', 'b': '#55FFFF',
+      'c': '#FF5555', 'd': '#FF55FF', 'e': '#FFFF55', 'f': '#FFFFFF',
+      'r': '#FFFFFF'
+    };
+
+    // Convert MOTD with § codes to colored HTML
+    function parseMotd(motd) {
+      let html = '';
+      let color = '#FFFFFF';
+      for (let i = 0; i < motd.length; i++) {
+        if (motd[i] === '§' && i + 1 < motd.length) {
+          const code = motd[i + 1].toLowerCase();
+          color = colorMap[code] || color;
+          i++;
+        } else {
+          html += `<span style="color: ${color}">${motd[i]}</span>`;
+        }
+      }
+      return html;
+    }
 
     function renderServers(filter = '') {
       const list = document.getElementById('server-list');
@@ -86,36 +47,39 @@
 
       const lowerFilter = filter.toLowerCase();
 
-      for (const ip in serverData) {
-        const server = serverData[ip];
+      // Reverse order
+      const reversedEntries = Object.entries(serverData).reverse();
+
+      for (const [ip, server] of reversedEntries) {
         const combinedText = ip + ' ' + server.motd;
         if (!combinedText.toLowerCase().includes(lowerFilter)) continue;
 
         const div = document.createElement('div');
         div.className = 'server';
         div.innerHTML = `
-          <div><strong>IP:</strong> ${ip}</div>
-          <div><strong>Version:</strong> ${server.version}</div>
-          <div><strong>Player's:</strong> ${server.players}
+          <div class="line"><strong>IP:</strong> ${ip}</div>
+          <div class="line"><strong>Version:</strong> ${server.version}</div>
+          <div class="line">
+            <strong>Players:</strong> ${server.players}
             <button class="info-button" onclick="toggleInfo(this)">?</button>
             <div class="info-text">
-              Online may change from current to what it was during the search!.
+              Online players may differ from the current state. These are scan-time values.
             </div>
           </div>
-          <div><strong>MOTD:</strong> ${server.motd}</div>
-          <button onclick="navigator.clipboard.writeText('${ip}')">Copy IP</button>
+          <div class="line"><strong>MOTD:</strong> <div>${parseMotd(server.motd)}</div></div>
+          <button class="copy-btn" onclick="navigator.clipboard.writeText('${ip}')">📋 Copy IP</button>
         `;
         list.appendChild(div);
       }
 
       if (list.innerHTML === '') {
-        list.innerHTML = '<i>Nothing found.</i>';
+        list.innerHTML = '<i>❌ No servers found.</i>';
       }
     }
 
     function toggleInfo(button) {
       const infoText = button.nextElementSibling;
-      infoText.style.display = (infoText.style.display === 'block') ? 'none' : 'block';
+      infoText.style.display = infoText.style.display === 'block' ? 'none' : 'block';
     }
 
     fetch('servers.json')
@@ -125,7 +89,7 @@
         renderServers();
       })
       .catch(error => {
-        document.getElementById('server-list').innerText = 'Ошибка загрузки данных.';
+        document.getElementById('server-list').innerText = '🚫 Failed to load data.';
         console.error(error);
       });
 
