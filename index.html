@@ -73,7 +73,7 @@
 <body>
   <h1>Server's minecraft</h1>
 
-  <input type="text" id="search" placeholder="Поиск по IP или MOTD...">
+  <input type="text" id="search" placeholder="Find with IP or MOTD...">
   <div id="server-list">Loading...</div>
 
   <script>
@@ -102,7 +102,7 @@
             </div>
           </div>
           <div><strong>MOTD:</strong> ${server.motd}</div>
-          <button onclick="navigator.clipboard.writeText('${ip}')">Скопировать IP</button>
+          <button onclick="navigator.clipboard.writeText('${ip}')">Copy IP</button>
         `;
         list.appendChild(div);
       }
