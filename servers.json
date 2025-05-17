@@ -353,5 +353,20 @@
     "version": "1.21.5",
     "players": 2,
     "motd": "A Minecraft Server"
+  },
+  "104.192.4.199": {
+    "version": "1.21.3",
+    "players": 0,
+    "motd": "3EON 2024 New World"
+  },
+  "104.192.5.114": {
+    "version": "1.21.1",
+    "players": 0,
+    "motd": "Welcome to Cygnus Games LL8 PVE Server | v1.0"
+  },
+  "104.192.6.137": {
+    "version": "Paper 1.20.2",
+    "players": 0,
+    "motd": "Dominion Gaming Lobby§r"
   }
 }
