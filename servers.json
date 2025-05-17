@@ -368,5 +368,20 @@
     "version": "Paper 1.20.2",
     "players": 0,
     "motd": "Dominion Gaming Lobby§r"
+  },
+  "104.192.224.11": {
+    "version": "Spigot 1.18.1",
+    "players": 0,
+    "motd": "§rServer provided by Elite Game Servers, visit us at §rwww.elitegameservers.net§r"
+  },
+  "104.192.226.203": {
+    "version": "BungeeCord 1.8.x-1.21.x",
+    "players": 0,
+    "motd": "§rLobby§r"
+  },
+  "104.192.227.4": {
+    "version": "1.21.4",
+    "players": 0,
+    "motd": "TheVille.org - SnifferVille"
   }
 }
