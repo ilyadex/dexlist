@@ -548,5 +548,40 @@
     "version": "1.18.2",
     "players": 0,
     "motd": "A Minecraft Server§r"
+  },
+  "Censored": {
+    "version": "Censored",
+    "players": 0,
+    "motd": "Censored"
+  },
+  "37.209.14.235": {
+    "version": "1.21.5",
+    "players": 0,
+    "motd": "A Minecraft Server"
+  },
+  "37.209.49.182": {
+    "version": "Spigot 1.21.5",
+    "players": 0,
+    "motd": "§rDockerServer"
+  },
+  "37.209.53.81": {
+    "version": "Paper 1.20.4",
+    "players": 0,
+    "motd": "Der grind Server (bald tot)"
+  },
+  "37.209.64.67": {
+    "version": "1.21.3",
+    "players": 0,
+    "motd": "A Minecraft Server"
+  },
+  "37.209.88.234": {
+    "version": "1.21.1",
+    "players": 0,
+    "motd": "FTB Presents Direwolf20 1.21 v1.4.1 Server Powered by Docker"
+  },
+  "37.209.117.138": {
+    "version": "1.21.5",
+    "players": 0,
+    "motd": "Hallo alle bei Linus"
   }
 }
