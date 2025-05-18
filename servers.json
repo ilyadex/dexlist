@@ -549,9 +549,9 @@
     "players": 0,
     "motd": "A Minecraft Server§r"
   },
-  "123": {
+  "1": {
     "version": "1.0",
-    "players": 0,
+    "players": 1,
     "motd": "Censored"
   },
   "37.209.14.235": {
@@ -583,5 +583,10 @@
     "version": "1.21.5",
     "players": 0,
     "motd": "Hallo alle bei Linus"
+  },
+  "37.210.247.103": {
+    "version": "1.20.1",
+    "players": 1,
+    "motd": "Project Architect 2§r"
   }
 }
