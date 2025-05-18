@@ -428,5 +428,10 @@
     "version": "1.20.1",
     "players": 0,
     "motd": "Rustam SMP smh§r"
+  },
+  "37.194.168.90": {
+    "version": "Paper 1.21.5",
+    "players": 0,
+    "motd": "Server"
   }
 }
