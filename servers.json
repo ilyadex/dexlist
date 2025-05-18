@@ -453,5 +453,45 @@
     "version": "Paper 1.21.4",
     "players": 0,
     "motd": "sw"
+  },
+  "37.201.47.143": {
+    "version": "1.21.1",
+    "players": 0,
+    "motd": "§bgames.fly-host.eu §f|§b Minecraft §f- §6Vanilla LTS §d1.21.1"
+  },
+  "37.201.49.45": {
+    "version": "1.7.10",
+    "players": 0,
+    "motd": "GT:New Horizons 2.7.0"
+  },
+  "37.201.60.187": {
+    "version": "1.21",
+    "players": 0,
+    "motd": "Vanilla Perfected"
+  },
+  "37.201.80.4": {
+    "version": "1.21.5",
+    "players": 0,
+    "motd": "A Minecraft Server"
+  },
+  "37.201.86.5": {
+    "version": "Paper 1.21.4",
+    "players": 0,
+    "motd": "\"Niemeier-Minecraft\""
+  },
+  "37.201.161.226": {
+    "version": "1.20.1",
+    "players": 0,
+    "motd": "A Minecraft Server§r"
+  },
+  "37.201.234.118": {
+    "version": "Paper 1.21.5",
+    "players": 0,
+    "motd": "Hi"
+  },
+  "37.202.61.100": {
+    "version": "1.21.4",
+    "players": 0,
+    "motd": "McFlyboy's Minecraft server"
   }
 }
