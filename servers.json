@@ -433,5 +433,10 @@
     "version": "Paper 1.21.5",
     "players": 0,
     "motd": "Server"
+  },
+  "37.195.251.31": {
+    "version": "Paper 1.21.4",
+    "players": 1,
+    "motd": "shalash minecraft place"
   }
 }
