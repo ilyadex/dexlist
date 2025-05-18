@@ -493,5 +493,60 @@
     "version": "1.21.4",
     "players": 0,
     "motd": "McFlyboy's Minecraft server"
+  },
+  "37.204.24.51": {
+    "version": "Paper 1.21.4",
+    "players": 0,
+    "motd": "OL1MP"
+  },
+  "37.204.167.199": {
+    "version": "1.20.1",
+    "players": 0,
+    "motd": "Better MC [FORGE] 1.20.1§r"
+  },
+  "37.205.9.53": {
+    "version": "1.20.1",
+    "players": 0,
+    "motd": "§6Blu's corner of many wonders§r"
+  },
+  "37.205.9.183": {
+    "version": "1.21.5",
+    "players": 0,
+    "motd": "A Minecraft Server"
+  },
+  "37.205.9.162": {
+    "version": "1.21.5",
+    "players": 1,
+    "motd": "A Minecraft Server"
+  },
+  "37.205.10.204": {
+    "version": "1.21.5",
+    "players": 0,
+    "motd": "A Minecraft Server by Straka"
+  },
+  "37.205.13.108": {
+    "version": "1.21.5",
+    "players": 0,
+    "motd": "Bombastic Side Eye"
+  },
+  "37.205.14.54": {
+    "version": "1.20.1",
+    "players": 0,
+    "motd": "A Minecraft Server§r"
+  },
+  "37.205.15.46": {
+    "version": "Paper 1.21.4",
+    "players": 0,
+    "motd": "A co jako?"
+  },
+  "37.205.54.86": {
+    "version": "1.21.4",
+    "players": 0,
+    "motd": "A Minecraft Server"
+  },
+  "37.205.60.213": {
+    "version": "1.18.2",
+    "players": 0,
+    "motd": "A Minecraft Server§r"
   }
 }
